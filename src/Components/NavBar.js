@@ -13,8 +13,8 @@ class NavBar extends Component {
     
   }
 };
-
-  handleCategoryChange = event => {
+handleCategoryChange = event => {
+    console.log("TEST")
     this.setState({[event.target.name]: event.target.value})
     console.log("HERE", event.target.value)
    };
