@@ -12,7 +12,7 @@ class NavBar extends Component {
       allArticles: []
     
   }
-}
+};
 
   handleCategoryChange = event => {
     this.setState({[event.target.name]: event.target.value})
