@@ -2,22 +2,36 @@ import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { fetchType } from "./apiCalls";
 
 
 class NavBar extends Component {
-  constructor(props) {
+  constructor() {
     super();
-    this.props = props;
+    //this.props = props;
     this.state = {
-      allArticles: []
+      allArticles: [],
+      //types: []
     
   }
 };
 handleCategoryChange = event => {
-    console.log("TEST")
-    this.setState({[event.target.name]: event.target.value})
-    console.log("HERE", event.target.value)
-   };
+    // this.setState({[event.target.name]: event.target.value})
+    console.log("HERE", event.target.name)
+    // console.log("VALUE", event.target.value)
+    const section = event.target.name
+    this.props.updateSection(section)
+
+    // fetchType(section)
+    // .then(console.log("SECTION", section))
+    // // .then((data) => this.setState(
+    // //   {allArticles: data.results}))
+    // //.then(data => this.props.goToCategory(data))
+    // //.then(console.log("DATA", data))
+    //   .catch(err => this.setState({ error: "Something went wrong, please try again"}))
+};
+
+   
 
   render() {
     const possibleCategories = ['Arts', 'Automobiles', 'Books', 'Business', 'Fashion', 'Food', 'Health', 'Home', 'Insider', 'Magazine', 'Movies', 'NY Region', 'Obituaries', 'Opinion', 'Politics', 'Real Estate', 'Science', 'Sports', 'Sunday Review', 'Technology', 'Theater', 'T-Magazine', 'Travel', 'Upshot', 'US' ];
@@ -33,8 +47,11 @@ handleCategoryChange = event => {
   return (
     <div className="nav-bar">
       <h1>New York Times Top Stories</h1>
+      <div>
+        
+      </div>
 
-        <button className="home">Top Stories</button>
+        <button className="home" onClick={event => this.handleCategoryChange(event)}>Top Stories</button>
         { categoryButtons }
 
         {/* // <button className="categories">Arts</button>
