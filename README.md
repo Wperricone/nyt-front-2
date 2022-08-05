@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# NYT Top Stories
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Solo Project
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Using an API provided by the New York Times I was able to create an app which shows the NYT's top stories. The landing page shows the title of the article with a photo. If you click on the title you will go to a page which shows more details of just the one article. On this detail page there is a link to go straight to the article on the NYT website. Additionally the user can filter the articles by section, by simply clicking on one of the buttons at the top.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Views
 
-### `npm test`
+### Home view of all patterns and clicking on one to see more options:
+![Pyrex home](https://user-images.githubusercontent.com/96502923/173266202-9e10d274-bea6-456f-9f3a-6eafd1c7e87a.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### From an individual pattern view, add the pattern to favorites and navigate to favorites:
+![Pyrex Add Fav](https://user-images.githubusercontent.com/96502923/173266539-7148fda3-4bc5-4c26-b8c3-a206977e2126.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### From an individual pattern view, delete the pattern from favorites and navigate back home:
+![Pyrex del](https://user-images.githubusercontent.com/96502923/173266698-4e90f093-f70e-4ee3-a3ab-6acbb40dc1e9.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### From home, navigate to favorites, and delete one favorite, and go back home:
+![Pyrex nav:del](https://user-images.githubusercontent.com/96502923/173266806-119be5f9-db55-4280-8a9e-7b67416d21a5.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## React
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- This multi page App with React was an exercise for me to learn and grow my knowledge of interacting with endpoints that were created from the API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Local Set-Up Instructions
 
-### Code Splitting
+### follow these steps to start the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- From the repo click the code button and copy the SSH link.
+- Open terminal by pressing command + space bar, and search for terminal
+- Inside of your terminal type `git clone` and then paste the ssh link. It should look like this: `git clone https://github.com/Wperricone/nyt-front-2.git`
+- In your terminal type `cd nyt-front-2`
+- Type `npm install`
+- Do not run `npm audit fix --force`
+- Then type `npm start` This runs the app in the development mode.
+- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The browser should then deploy using a local host
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- NOTE: Make sure that you type `Control + C` in your terminal when you are done using the application. This ensure the server will stop running before your close your Terminal.
 
-### Making a Progressive Web App
+## Instructions for Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- On opening the browser, a user is free to scroll all of the Top Stories from the NYT
+- Each article can be clicked on and the user will then see more details of that one article
+- Within this page there is a link to direct the user to the whole article on the NYT website in a new tab
+- A user can navigate between the home page and any of the categories at the top of the app to filter by category
+- Once on a category page, a user can go back by clicking on the home button
 
-### Advanced Configuration
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- React
+- React Router
+- GET requests
+- ES6 JavaScript
+- Styled Components
+- HTML
+- Fetch Web API
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Project Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I used a [Github Project Board](https://github.com/Wperricone/nyt-front/projects/1) stay on task and meet the deadlines.
+
+### Figma Component Architecture
+
+[Figma Plans](https://www.figma.com/file/CYxYoasqzeUmqbcsPFM231/Untitled)
+[Figma Architecture](https://www.figma.com/file/nCkJcx9RBuKXmIisGSUZ3X/NYT?node-id=0%3A1)
+
+
+## Contributors
+
+- [Whitney Perricone](https://github.com/Wperricone)
