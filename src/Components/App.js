@@ -62,7 +62,7 @@ class App extends Component {
           typesData={this.state.${section}}
           //goToCategory={this.goToCategory}
           /> */}
-        {/* //}/> */}
+
         </Routes>
       </section>
      </main>

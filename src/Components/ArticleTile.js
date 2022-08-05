@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const ArticleTile = ({ articleTitle, section, abstract, byline, publishedDate, goToArticle, multimedia }) => {
   //console.log(goToArticle)
-
+if(byline) {
   return (
     <TileSection className='tile'>
       <h3 className='article-title'>{articleTitle}
@@ -14,15 +14,18 @@ const ArticleTile = ({ articleTitle, section, abstract, byline, publishedDate, g
         <p className='article-abstract'>{abstract}</p>
         <p className='article-byline'>{byline}</p>
         <p className='published-date'>Date published: {publishedDate}</p>
-        {/* <button href={goToArticle}>See Full Article Here</button> */}
-        {/* <img className='multimedia'/> */}
+        <a href={goToArticle}>See Full Article Here</a>
+        {/* <img> {multimedia}</img> */}
+         {/* <img className='multimedia'src={article.multimedia[2].url}/> */}
       </h3>
     </TileSection>
   )
+}
 }
 
 export default ArticleTile;
 
 const TileSection = styled.section`
 border: solid red 2px;
+
 `

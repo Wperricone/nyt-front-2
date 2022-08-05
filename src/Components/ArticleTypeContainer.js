@@ -5,25 +5,26 @@ import styled from "styled-components";
 const ArticleTypeContainer = ({
   typesData }) => {
     if(typesData.length) {
+      console.log("URL", typesData)
       const articleTile = typesData.map(article => {
-        console.log("URL", article.url)
+        
         return (
           <ArticleTile
-          //section={article.section}
-          articleTitle={article.title}
+          //articleTitle={article.title}
           key={article.url}
           section={article.section}
-          abstract={article.abstract}
+          //abstract={article.abstract}
           byline={article.byline}
           publishedDate={article.published_date}
-          //multimedia={article.url}
+          //multimedia={article.mulitmedia}
           goToArticle={article.url}
           
           />
         )
       })
+      console.log("TILE", articleTile)
       return (
-        <ArticleContainerSection className='articles-container'>{articleTile}
+        <ArticleContainerSection >{articleTile}
       </ArticleContainerSection>
     )
     }
@@ -32,5 +33,9 @@ const ArticleTypeContainer = ({
   export default ArticleTypeContainer;
 
   const ArticleContainerSection = styled.section`
-border: solid black 2px;
+border: solid black 5px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
 `
+//align-items: right;
