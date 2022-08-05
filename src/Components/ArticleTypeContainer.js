@@ -6,6 +6,7 @@ const ArticleTypeContainer = ({
   typesData }) => {
     if(typesData.length) {
       const articleTile = typesData.map(article => {
+        console.log("URL", article.url)
         return (
           <ArticleTile
           //section={article.section}
@@ -16,6 +17,8 @@ const ArticleTypeContainer = ({
           byline={article.byline}
           publishedDate={article.published_date}
           //multimedia={article.url}
+          goToArticle={article.url}
+          
           />
         )
       })

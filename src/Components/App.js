@@ -20,16 +20,24 @@ class App extends Component {
    fetchAllArticles()
      .then((data) => this.setState(
        {allArticles: data.results}))
+       //.then(data => (console.log("DATA", data.results.url)))
        .catch(err => this.setState({ error: "Something went wrong, please try again"}))
  };
 
- goToCategory = (section) => {
+ updateSection = (section) => {
   fetchType(section)
-  .then(data => {
-    this.setState({allArticles: data.results})
-  })
-  .catch(err => this.setState({ error: "Something went wrong, please try again" }))
+  .then((data) => this.setState(
+    {allArticles: data.results}))
  };
+
+
+//  goToCategory = (data) => {
+//   // fetchType(section)
+//   // .then(data => {
+//     this.setState({allArticles: '', types: this.state.types})
+//   }
+
+ 
 
 
  
@@ -38,7 +46,9 @@ class App extends Component {
      <main>
       <section>
        <NavBar 
-       handleCategoryChange={this.state.allArticles}
+       //handleCategoryChange={this.state.allArticles}
+       updateSection={this.updateSection}
+       //goToCategory={this.goToCategory}
        />
        <Routes>
         <Route exact path="/" element={
@@ -46,13 +56,13 @@ class App extends Component {
            allArticlesData={this.state.allArticles}
           />
          }/>
-         {/* <Route exact path="/"
+         {/* <Route exact path="/${section}"
          element={() => 
           <ArticleTypeContainer
-          typesData={this.state.allArticles}
-          goToCategory={this.goToCategory}
-          />
-        }/> */}
+          typesData={this.state.${section}}
+          //goToCategory={this.goToCategory}
+          /> */}
+        {/* //}/> */}
         </Routes>
       </section>
      </main>
