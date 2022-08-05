@@ -25,4 +25,7 @@ export default ArticleTile;
 
 const TileSection = styled.section`
 border: solid red 2px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
 `

@@ -23,7 +23,7 @@ const ArticleTypeContainer = ({
         )
       })
       return (
-        <ArticleContainerSection className='articles-container'>{articleTile}
+        <ArticleContainerSection >{articleTile}
       </ArticleContainerSection>
     )
     }
@@ -32,5 +32,9 @@ const ArticleTypeContainer = ({
   export default ArticleTypeContainer;
 
   const ArticleContainerSection = styled.section`
-border: solid black 2px;
+border: solid black 5px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
 `
+//align-items: right;

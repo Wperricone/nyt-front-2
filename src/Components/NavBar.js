@@ -37,53 +37,52 @@ handleCategoryChange = event => {
     const possibleCategories = ['Arts', 'Automobiles', 'Books', 'Business', 'Fashion', 'Food', 'Health', 'Home', 'Insider', 'Magazine', 'Movies', 'NY Region', 'Obituaries', 'Opinion', 'Politics', 'Real Estate', 'Science', 'Sports', 'Sunday Review', 'Technology', 'Theater', 'T-Magazine', 'Travel', 'Upshot', 'US' ];
     const categoryButtons = possibleCategories.map(category => {
       return (
-        <button key={category} name={category} onClick={event => this.handleCategoryChange(event)}>
+        <Button key={category} name={category} onClick={event => this.handleCategoryChange(event)}>
           {category}
-        </button>
+        </Button>
       )
     })
   
   
   return (
-    <div className="nav-bar">
+      <NavBarDiv className="nav-bar">
+    <div>
       <h1>New York Times Top Stories</h1>
-      <div>
-        
       </div>
+        <ButtonsDiv>
 
-        <button className="home" onClick={event => this.handleCategoryChange(event)}>Top Stories</button>
+
+        <Button className="home" onClick={event => this.handleCategoryChange(event)}>Top Stories</Button>
         { categoryButtons }
+        </ButtonsDiv>
 
-        {/* // <button className="categories">Arts</button>
-        // <button className="categories">Automobiles</button>
-        // <button className="categories">Books</button>
-        // <button className="categories">Business</button>
-        // <button className="categories">Fashion</button>
-        // <button className="categories">Food</button>
-        // <button className="categories">Health</button>
-        // <button className="categories">Insider</button>
-        // <button className="categories">Magazine</button>
-        // <button className="categories">Movies</button>
-        // <button className="categories">NY Region</button>
-        // <button className="categories">Obituaries</button>
-        // <button className="categories">Opinion</button>
-        // <button className="categories">Politics</button>
-        // <button className="categories">Real Estate</button>
-        // <button className="categories">Science</button>
-        // <button className="categories">Sports</button>
-        // <button className="categories">Sunday Review</button>
-        // <button className="categories">Technology</button>
-        // <button className="categories">Theater</button>
-        // <button className="categories">T-Magazine</button>
-        // <button className="categories">Travel</button>
-        // <button className="categories">Upshot</button>
-        // <button className="categories">US</button>
-        // <button className="categories">World</button> */}
 
-    </div>
+    </NavBarDiv>
   )
 }
 };
 
 
 export default NavBar;
+
+const Button = styled.button`
+align-self: center;
+margin: 1%;
+width: 100%
+border-radius: 25px;
+`;
+const ButtonSection = styled.section`
+border: solid pink 3px;
+`
+const NavBarDiv = styled.div`
+
+`
+const ButtonsDiv = styled.div`
+display: grid;
+grid-template-columns: repeat(9, 1fr);
+grid-gap: 10px;
+`
+//align-items: center;
+// display: flex;
+// flex-direction: row;
+// justify-content: center;
