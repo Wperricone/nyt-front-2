@@ -13,7 +13,8 @@ Using an API provided by the New York Times I was able to create an app which sh
 - This multi page App with React was an exercise for me to learn and grow my knowledge of interacting with endpoints that were created from the API.
 
 
-
+## Gif of article detail
+![Take home](https://user-images.githubusercontent.com/96502923/183222658-9ae360a2-29f8-4364-8165-8b79274b29a1.gif)
 
 
 ## Local Set-Up Instructions
