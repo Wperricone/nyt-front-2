@@ -5,22 +5,24 @@ import styled from "styled-components";
 const ArticleTypeContainer = ({
   typesData }) => {
     if(typesData.length) {
+      console.log("URL", typesData)
       const articleTile = typesData.map(article => {
-        console.log("URL", article.url)
+        
         return (
           <ArticleTile
-          articleTitle={article.title}
+          //articleTitle={article.title}
           key={article.url}
           section={article.section}
-          abstract={article.abstract}
+          //abstract={article.abstract}
           byline={article.byline}
           publishedDate={article.published_date}
-          multimedia={article.mulitmedia}
+          //multimedia={article.mulitmedia}
           goToArticle={article.url}
           
           />
         )
       })
+      console.log("TILE", articleTile)
       return (
         <ArticleContainerSection >{articleTile}
       </ArticleContainerSection>
