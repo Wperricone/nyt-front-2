@@ -9,14 +9,13 @@ const ArticleTypeContainer = ({
         console.log("URL", article.url)
         return (
           <ArticleTile
-          //section={article.section}
           articleTitle={article.title}
           key={article.url}
           section={article.section}
           abstract={article.abstract}
           byline={article.byline}
           publishedDate={article.published_date}
-          //multimedia={article.url}
+          multimedia={article.mulitmedia}
           goToArticle={article.url}
           
           />

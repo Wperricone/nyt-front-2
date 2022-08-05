@@ -34,7 +34,7 @@ handleCategoryChange = event => {
    
 
   render() {
-    const possibleCategories = ['Arts', 'Automobiles', 'Books', 'Business', 'Fashion', 'Food', 'Health', 'Home', 'Insider', 'Magazine', 'Movies', 'NY Region', 'Obituaries', 'Opinion', 'Politics', 'Real Estate', 'Science', 'Sports', 'Sunday Review', 'Technology', 'Theater', 'T-Magazine', 'Travel', 'Upshot', 'US' ];
+    const possibleCategories = [ 'home', 'Arts', 'Automobiles', 'Books', 'Business', 'Fashion', 'Food', 'Health', 'Home', 'Insider', 'Magazine', 'Movies', 'NY Region', 'Obituaries', 'Opinion', 'Politics', 'Real Estate', 'Science', 'Sports', 'Sunday Review', 'Technology', 'Theater', 'T-Magazine', 'Travel', 'Upshot', 'US' ];
     const categoryButtons = possibleCategories.map(category => {
       return (
         <Button key={category} name={category} onClick={event => this.handleCategoryChange(event)}>
@@ -52,7 +52,7 @@ handleCategoryChange = event => {
         <ButtonsDiv>
 
 
-        <Button className="home" onClick={event => this.handleCategoryChange(event)}>Top Stories</Button>
+        {/* <Button className="home" onClick={event => this.handleCategoryChange(event)}>Top Stories</Button> */}
         { categoryButtons }
         </ButtonsDiv>
 
